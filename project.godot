@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Slaughtful Conquest"
-config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://twgatojy4dux"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+config/icon="res://Assets/icon.svg"
 
 [dotnet]
 
