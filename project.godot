@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Slaughtful Conquest"
-run/main_scene="uid://twgatojy4dux"
+run/main_scene="uid://b2idjb4ib6aut"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=320
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [dotnet]
 

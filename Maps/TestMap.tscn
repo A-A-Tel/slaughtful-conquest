@@ -1,0 +1,46 @@
+[gd_scene format=4 uid="uid://b2idjb4ib6aut"]
+
+[ext_resource type="Texture2D" uid="uid://jsol5scmkl8" path="res://Paths/PathTiles.png" id="1_jy3yd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jy3yd"]
+texture = ExtResource("1_jy3yd")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6l4mb"]
+sources/0 = SubResource("TileSetAtlasSource_jy3yd")
+
+[node name="TestMap" type="Node2D" unique_id=1486550777]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1141663022]
+tile_map_data = PackedByteArray("AAADAAIAAAAAAAQAAAANAAkAAAAAAAQAAAAYAAcAAAAAAAQAAAAGAAwAAAAAAAQAAAAGAA0AAAAAAAQAAAAeABIAAAAAAAQAAAAfABIAAAAAAAQAAAAUAAsAAAAAAAQAAAAjAAkAAAAAAAQAAAAYAAMAAAAAAAQAAAAOAAQAAAAAAAQAAAAfAAQAAAAAAAQAAAASAAcAAAAAAAQAAAA=")
+tile_set = SubResource("TileSet_6l4mb")
