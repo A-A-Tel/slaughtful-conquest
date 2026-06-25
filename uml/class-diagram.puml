@@ -1,0 +1,89 @@
+@startuml
+static class Globals {
+    + Settings: Settings {static}
+}
+
+enum WindowMode {
+    + Borderless
+    + Fullscreen
+    + Windowed
+}
+
+class Settings {
+    + MasterVolume: int
+    + MusicVolume: int
+    + EffectsVolume: int
+    + Resolution: Vector2
+    + WindowMode: WindowMode
+    + FpsLock: int
+    + Vsync: bool
+}
+
+enum MapState {
+    + PreStart
+    + Spawning
+    + Intermission
+}
+
+abstract class Map {
+    + Health: int
+    + Bones: _bones
+    
+    - _bones: int
+    - _state: MapState
+    - _towers: List<Tower>
+    - _path: Path2D
+    - _pauseMenu: PauseMenu
+    - _roundTimer: Timer
+    - _enemyRounds: Enemy[][][] {abstract}
+    
+    + Start(): void
+    - OnRoundTimerEnd(): void
+}
+
+abstract class Tower {
+    + RangeRadius: int
+    
+    - _cooldown: Timer
+    - _damage: int
+    
+    - OnCooldownEnd(): void {abstract}
+}
+
+class PauseMenu {
+    - _genericMenu: GenericMenu
+    - _settingsMenu: SettingsMenu
+    
+    - ShowGenericMenu(): void
+    - ShowSettingsMenu(): void
+    - QuitToMainMenu(): void
+}
+
+abstract class Enemy {
+    - _health: int
+    - _speed: double 
+    
+    + TakeDamage(amount: int)
+}
+
+Globals --> Settings : Settings
+
+Settings --> WindowMode : WindowMode
+
+Map --> MapState : state
+Map *-- "0..*" Tower : towers
+Map *-- PauseMenu : pauseMenu
+Map --> Enemy : enemyRounds
+
+PauseMenu *-- GenericMenu : genericMenu
+PauseMenu *-- SettingsMenu : settingsMenu
+
+Tower --> Timer : cooldown
+Map --> Timer : roundTimer
+Map --> Path2D : path
+
+Map <|-- ConcreteMap
+
+Tower <|-- ConcreteTower
+
+@enduml
