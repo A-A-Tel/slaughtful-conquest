@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Slaughtful Conquest"
+run/main_scene="uid://ce6674qqf81dl"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://dgnaw7j8w78cn"
 
 [display]
 

@@ -7,7 +7,6 @@
     </PropertyGroup>
     <ItemGroup>
       <Folder Include="Menus\GenericMenu\" />
-      <Folder Include="Menus\MainMenu\" />
       <Folder Include="Menus\PauseMenu\" />
     </ItemGroup>
 </Project>

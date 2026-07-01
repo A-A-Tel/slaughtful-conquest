@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bghlty6bw37pv"]
+
+[ext_resource type="FontFile" uid="uid://bc1lgl0umphhl" path="res://Fonts/Castaway.otf" id="1_0bhet"]
+[ext_resource type="Script" uid="uid://dqbiqt7v1rhpx" path="res://Menus/MainMenu/MainMenu.cs" id="1_jyye3"]
+[ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_cpfrm"]
+
+[node name="MainMenu" type="Control" unique_id=1094183842]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jyye3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1468313464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6181841, 0.85833603, 0.50844425, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1613378734]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.32500002
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_0bhet")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Slaughtful Conquest[/center]"
+
+[node name="Button" type="Button" parent="." unique_id=528936606]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 0.52500004
+anchor_right = 0.537
+anchor_bottom = 0.6
+offset_left = 0.32000732
+offset_top = -1.5258789e-05
+offset_right = 0.32000732
+theme_override_fonts/font = ExtResource("2_cpfrm")
+theme_override_font_sizes/font_size = 16
+text = "Play"
+
+[node name="Button2" type="Button" parent="." unique_id=1458161323]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 0.65000004
+anchor_right = 0.537
+anchor_bottom = 0.725
+offset_left = -15.679993
+offset_top = -1.5258789e-05
+offset_right = 15.320007
+theme_override_fonts/font = ExtResource("2_cpfrm")
+theme_override_font_sizes/font_size = 16
+text = "Settings"
