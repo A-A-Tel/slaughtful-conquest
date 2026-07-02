@@ -88,6 +88,7 @@ public partial class TestMap : Map
 		if (_currentWaveIndex >= _waves.Count)
 		{
 			GD.Print("All waves complete!");
+			GetTree().Quit();
 			return;
 		}
 
@@ -154,7 +155,6 @@ public partial class TestMap : Map
 	{
 		if (_spawnQueue.Count > 0)
 		{
-			GetTree().Quit();
 		}
 		if (_aliveThisWave > 0) return;
 
