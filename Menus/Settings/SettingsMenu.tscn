@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djksu3dv4b3n4"]
 
-[ext_resource type="Script" uid="uid://dyygdcstqwgii" path="res://Menus/SettingsMenu/SettingsMenu.cs" id="1_6qxfb"]
+[ext_resource type="Script" uid="uid://dyygdcstqwgii" path="res://Menus/Settings/SettingsMenu.cs" id="1_6qxfb"]
 [ext_resource type="FontFile" uid="uid://bc1lgl0umphhl" path="res://Fonts/Castaway.otf" id="1_hh712"]
 [ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_rj8ut"]
 

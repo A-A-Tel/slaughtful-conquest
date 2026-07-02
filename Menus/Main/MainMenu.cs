@@ -1,7 +1,6 @@
-using System;
 using Godot;
-	
-namespace SlaughtfulConquest.Menus.MainMenu;
+
+namespace SlaughtfulConquest.Menus.Main;
 
 public partial class MainMenu : Control
 {
@@ -19,7 +18,7 @@ public partial class MainMenu : Control
 
 	private void OnPlayButtonPressed()
 	{
-		Console.WriteLine("Pressed");
+		Globals.Game.Add("uid://h5cyxtybvs5e");
 	}
 
 	private void OnSettingsButtonPressed()

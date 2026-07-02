@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Godot;
 using SlaughtfulConquest.Data;
 
-namespace SlaughtfulConquest.Menus.SettingsMenu;
+namespace SlaughtfulConquest.Menus.Settings;
 
 public partial class SettingsMenu : Control
 {
@@ -145,9 +144,10 @@ public partial class SettingsMenu : Control
 	}
 
 
-	private static void OnSavePressed()
+	private void OnSavePressed()
 	{
 		Globals.Settings.SaveSettings();
 		Globals.Ui.Close<SettingsMenu>();
+		QueueFree();
 	}
 }

@@ -3,23 +3,21 @@ using Godot;
 
 namespace SlaughtfulConquest.Main;
 
-public partial class Ui : CanvasLayer
+public partial class Game : Node2D
 {
 	public override void _Ready()
 	{
-		Globals.Ui = this;
-		CallDeferred(nameof(Open), "uid://bghlty6bw37pv");
+		Globals.Game = this;
 	}
-
-	public void Open(string path)
+	
+	public void Add(string path)
 	{
 		PackedScene scene = ResourceLoader.Load<PackedScene>(path);
 		AddChild(scene.Instantiate());
 	}
-
 	
-	public void Close<TMenu>()
-		where TMenu : Control
+	public void Remove<TMenu>()
+		where TMenu : Node2D
 	{
 		TMenu menu = GetChildren()
 			.OfType<TMenu>()
