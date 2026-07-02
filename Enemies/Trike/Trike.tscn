@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7sbvxx32g813"]
+
+[ext_resource type="Script" uid="uid://cnfeibgxccctd" path="res://Enemies/Trike/Trike.cs" id="1_bafma"]
+
+[node name="Trike" type="Node2D" unique_id=605990545]
+script = ExtResource("1_bafma")
