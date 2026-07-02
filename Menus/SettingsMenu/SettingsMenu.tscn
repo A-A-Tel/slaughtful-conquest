@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://djksu3dv4b3n4"]
 
+[ext_resource type="Script" uid="uid://dyygdcstqwgii" path="res://Menus/SettingsMenu/SettingsMenu.cs" id="1_6qxfb"]
 [ext_resource type="FontFile" uid="uid://bc1lgl0umphhl" path="res://Fonts/Castaway.otf" id="1_hh712"]
 [ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_rj8ut"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6qxfb")
 
 [node name="BorderRect" type="ColorRect" parent="." unique_id=1003587971]
 layout_mode = 1
@@ -51,7 +53,7 @@ theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "[center]Settings[/center]"
 
-[node name="MasterVolume" type="HSlider" parent="." unique_id=994237664]
+[node name="Master" type="HSlider" parent="." unique_id=994237664]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.23700002
@@ -62,7 +64,7 @@ offset_left = 0.31999207
 offset_top = 0.1599884
 offset_right = 0.3199768
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MasterVolume" unique_id=1843692549]
+[node name="RichTextLabel" type="RichTextLabel" parent="Master" unique_id=1843692549]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -76,7 +78,7 @@ theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]Master volume[/center]"
 
-[node name="MusicVolume" type="HSlider" parent="." unique_id=1843628427]
+[node name="Music" type="HSlider" parent="." unique_id=1843628427]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.23700002
@@ -88,7 +90,7 @@ offset_top = 11.999985
 offset_right = 0.3199768
 offset_bottom = 15.999985
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MusicVolume" unique_id=182964291]
+[node name="RichTextLabel" type="RichTextLabel" parent="Music" unique_id=182964291]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -102,7 +104,7 @@ theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]Music volume[/center]"
 
-[node name="EffectsVolume" type="HSlider" parent="." unique_id=1158532281]
+[node name="Effects" type="HSlider" parent="." unique_id=1158532281]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.23700002
@@ -113,7 +115,7 @@ offset_left = 0.31999207
 offset_top = 0.1599884
 offset_right = 0.3199768
 
-[node name="RichTextLabel" type="RichTextLabel" parent="EffectsVolume" unique_id=117864250]
+[node name="RichTextLabel" type="RichTextLabel" parent="Effects" unique_id=117864250]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -127,7 +129,7 @@ theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]Effects volume[/center]"
 
-[node name="FpsLock" type="HSlider" parent="." unique_id=1042818163]
+[node name="Fps" type="HSlider" parent="." unique_id=1042818163]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.512
@@ -142,7 +144,7 @@ min_value = 30.0
 max_value = 241.0
 value = 120.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="FpsLock" unique_id=1417542537]
+[node name="RichTextLabel" type="RichTextLabel" parent="Fps" unique_id=1417542537]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -156,7 +158,7 @@ theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]Max FPS[/center]"
 
-[node name="OptionButton" type="OptionButton" parent="." unique_id=628653801]
+[node name="Resolution" type="OptionButton" parent="." unique_id=628653801]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.194
@@ -169,20 +171,21 @@ offset_right = -83.84003
 offset_bottom = -83.84
 theme_override_fonts/font = ExtResource("2_rj8ut")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="OptionButton" unique_id=2043343820]
+[node name="RichTextLabel" type="RichTextLabel" parent="Resolution" unique_id=2043343820]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = -1.4000001
 anchor_right = 0.90000004
 anchor_bottom = -0.45000002
-offset_top = -0.9999981
+offset_top = 1.0000019
+offset_bottom = 2.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]Resolution[/center]"
 
-[node name="CheckBox" type="CheckBox" parent="." unique_id=1604718727]
+[node name="Vsync" type="CheckBox" parent="." unique_id=1604718727]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.71900004
@@ -194,7 +197,7 @@ offset_top = 0.1599884
 offset_right = 0.15997314
 offset_bottom = 0.1599884
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CheckBox" unique_id=1531308228]
+[node name="RichTextLabel" type="RichTextLabel" parent="Vsync" unique_id=1531308228]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -1.167
@@ -210,7 +213,7 @@ theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]V-Sync[/center]"
 
-[node name="OptionButton2" type="OptionButton" parent="." unique_id=634293503]
+[node name="WindowMode" type="OptionButton" parent="." unique_id=634293503]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.194
@@ -231,7 +234,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Windowed"
 popup/item_2/id = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="OptionButton2" unique_id=993670463]
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowMode" unique_id=993670463]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -239,13 +242,15 @@ anchor_top = -1.45
 anchor_right = 0.92300004
 anchor_bottom = -0.45000002
 offset_left = -2.4000015
+offset_top = 8.0
 offset_right = 0.008003235
+offset_bottom = 8.000001
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_rj8ut")
 bbcode_enabled = true
 text = "[center]WIndow mode[/center]"
 
-[node name="Button" type="Button" parent="." unique_id=1626051081]
+[node name="Save" type="Button" parent="." unique_id=1626051081]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.81200004

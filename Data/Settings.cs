@@ -12,40 +12,40 @@ public enum WindowMode
 
 public partial class SettingsManager : Node
 {
-    private const string ConfigPath = "user://config/settings.ini"; 
+    private const string ConfigPath = "user://settings.ini"; 
     
-    public int MasterVolume { get; set; } = 80;
-    public int MusicVolume { get; set; } = 80;
-    public int EffectsVolume { get; set; } = 80;
+    public int MasterVolume { get; set; }
+    public int MusicVolume { get; set; }
+    public int EffectsVolume { get; set; }
     
-    public Vector2I Resolution { get; set; } = new(1280, 720);
-    public WindowMode WindowModeSetting { get; set; } = WindowMode.Borderless;
+    public Vector2I Resolution { get; set; }
+    public WindowMode WindowModeSetting { get; set; }
     
-    public int FpsLock { get; set; } = 120;
-    public bool Vsync { get; set; } = true;
+    public int FpsLock { get; set; }
+    public bool Vsync { get; set; }
 
     public void LoadSettings()
     {
+        ConfigFile config = new();
+        config.Load(ConfigPath);
+        
+        MasterVolume = config.GetValue("audio", nameof(MasterVolume), 80).As<int>();
+        MusicVolume = config.GetValue("audio", nameof(MusicVolume), 80).As<int>();
+        EffectsVolume = config.GetValue("audio", nameof(EffectsVolume), 80).As<int>();
+        
+        Resolution = config.GetValue("video", nameof(Resolution), new Vector2I(1280,720)).As<Vector2I>();
+        WindowModeSetting = (WindowMode)config.GetValue("video", nameof(WindowModeSetting), 0).As<int>();
+        
+        FpsLock = config.GetValue("frames", nameof(FpsLock), 120).As<int>();
+        Vsync = config.GetValue("frames", nameof(Vsync), false).As<bool>();
+
         if (FileAccess.FileExists(ConfigPath))
         {
-            ConfigFile config = new();
-            config.Load(ConfigPath);
-            
-            MasterVolume = config.GetValue("audio", nameof(MasterVolume), MasterVolume).As<int>();
-            MusicVolume = config.GetValue("audio", nameof(MusicVolume), MusicVolume).As<int>();
-            EffectsVolume = config.GetValue("audio", nameof(EffectsVolume), EffectsVolume).As<int>();
-            
-            Resolution = config.GetValue("video", nameof(Resolution), Resolution).As<Vector2I>();
-            WindowModeSetting = config.GetValue("video", nameof(WindowModeSetting)).As<WindowMode>();
-            
-            FpsLock = config.GetValue("frames", nameof(FpsLock), FpsLock).As<int>();
-            Vsync = config.GetValue("frames", nameof(Vsync), Vsync).As<bool>();
-
-            ApplyAllSettings();
+            SaveSettings();
         }
         else
         {
-            SaveSettings();
+            ApplyAllSettings();
         }
     }
 
