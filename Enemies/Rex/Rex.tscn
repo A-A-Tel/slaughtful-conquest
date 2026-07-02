@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjg04vfoiqwgh"]
+
+[ext_resource type="Texture2D" uid="uid://dp5atek8o2cm2" path="res://Enemies/Rex/Assets/Texture.png" id="1_esa78"]
+[ext_resource type="Script" uid="uid://bmyxxavdqlvrj" path="res://Enemies/Rex/Rex.cs" id="1_hhnfg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxnig"]
+size = Vector2(32, 20)
+
+[node name="Rex" type="PathFollow2D" unique_id=1975929533]
+script = ExtResource("1_hhnfg")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=58438117]
+texture = ExtResource("1_esa78")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1154493852]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1163409929]
+shape = SubResource("RectangleShape2D_cxnig")

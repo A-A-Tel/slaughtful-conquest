@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bbby3rywvgjvk"]
+
+[ext_resource type="Script" uid="uid://be0wmmr67r87r" path="res://Enemies/Bronto/Bronto.cs" id="1_50eve"]
+[ext_resource type="Texture2D" uid="uid://b2vrmcs7rjewi" path="res://Enemies/Bronto/Assets/Texture.png" id="1_ya6ra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50eve"]
+size = Vector2(32, 32)
+
+[node name="Bronto" type="PathFollow2D" unique_id=1962619736]
+script = ExtResource("1_50eve")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=134776741]
+texture = ExtResource("1_ya6ra")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2066016678]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1168399299]
+shape = SubResource("RectangleShape2D_50eve")
