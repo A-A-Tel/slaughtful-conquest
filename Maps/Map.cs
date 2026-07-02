@@ -1,6 +1,8 @@
+using Godot;
+
 namespace SlaughtfulConquest.Maps;
 
-public abstract class Map
+public abstract partial class Map : Node2D
 {
     
 }

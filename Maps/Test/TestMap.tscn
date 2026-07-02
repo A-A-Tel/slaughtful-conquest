@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://h5cyxtybvs5e"]
+
+[ext_resource type="Script" uid="uid://dh5s8qkl6uak" path="res://Maps/Test/TestMap.cs" id="1_b51rp"]
+
+[node name="TestMap" type="Node2D" unique_id=1952824425]
+script = ExtResource("1_b51rp")

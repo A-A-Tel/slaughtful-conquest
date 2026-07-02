@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://djksu3dv4b3n4"]
+
+[ext_resource type="Script" uid="uid://dyygdcstqwgii" path="res://Menus/Settings/SettingsMenu.cs" id="1_6qxfb"]
+[ext_resource type="FontFile" uid="uid://bc1lgl0umphhl" path="res://Fonts/Castaway.otf" id="1_hh712"]
+[ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_rj8ut"]
+
+[node name="SettingsMenu" type="Control" unique_id=617976794]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6qxfb")
+
+[node name="BorderRect" type="ColorRect" parent="." unique_id=1003587971]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14400001
+anchor_top = 0.112
+anchor_right = 0.76900005
+anchor_bottom = 0.887
+offset_left = 31.839996
+offset_top = 0.15999985
+offset_right = 23.839966
+offset_bottom = 0.16000366
+color = Color(0.09803922, 0.2509804, 0.14901961, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=26664874]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.125
+anchor_right = 0.8
+anchor_bottom = 0.87500006
+offset_bottom = -3.0517578e-05
+color = Color(0.61960787, 0.85882354, 0.50980395, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1582603594]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41200003
+anchor_top = 0.25
+anchor_right = 0.587
+anchor_bottom = 0.35000002
+offset_left = 0.3199768
+offset_top = -24.0
+offset_right = 0.32000732
+offset_bottom = -24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_hh712")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Settings[/center]"
+
+[node name="Master" type="HSlider" parent="." unique_id=994237664]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23700002
+anchor_top = 0.38700002
+anchor_right = 0.48700002
+anchor_bottom = 0.45000002
+offset_left = 0.31999207
+offset_top = 0.1599884
+offset_right = 0.3199768
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Master" unique_id=1843692549]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.25
+anchor_right = 0.90000004
+anchor_bottom = -0.25
+offset_top = -4.0
+offset_bottom = -4.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]Master volume[/center]"
+
+[node name="Music" type="HSlider" parent="." unique_id=1843628427]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23700002
+anchor_top = 0.52500004
+anchor_right = 0.48700002
+anchor_bottom = 0.57500005
+offset_left = 0.31999207
+offset_top = 11.999985
+offset_right = 0.3199768
+offset_bottom = 15.999985
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Music" unique_id=182964291]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.5000001
+anchor_right = 0.90000004
+anchor_bottom = -0.6
+offset_right = -1.5258789e-05
+offset_bottom = 1.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]Music volume[/center]"
+
+[node name="Effects" type="HSlider" parent="." unique_id=1158532281]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23700002
+anchor_top = 0.73700005
+anchor_right = 0.48700002
+anchor_bottom = 0.8
+offset_left = 0.31999207
+offset_top = 0.1599884
+offset_right = 0.3199768
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Effects" unique_id=117864250]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.25
+anchor_right = 0.90000004
+anchor_bottom = -0.5
+offset_top = -4.0
+offset_right = -1.5258789e-05
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]Effects volume[/center]"
+
+[node name="Fps" type="HSlider" parent="." unique_id=1042818163]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.38700002
+anchor_right = 0.762
+anchor_bottom = 0.437
+offset_left = 0.3199768
+offset_top = 0.1599884
+offset_right = 0.3199768
+offset_bottom = 0.16000366
+min_value = 30.0
+max_value = 241.0
+value = 120.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Fps" unique_id=1417542537]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.25
+anchor_right = 0.90000004
+anchor_bottom = -0.25
+offset_top = -4.0
+offset_bottom = -4.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]Max FPS[/center]"
+
+[node name="Resolution" type="OptionButton" parent="." unique_id=628653801]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.112
+anchor_right = 0.80600005
+anchor_bottom = 0.887
+offset_left = 203.84
+offset_top = 144.16
+offset_right = -83.84003
+offset_bottom = -83.84
+theme_override_fonts/font = ExtResource("2_rj8ut")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Resolution" unique_id=2043343820]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.4000001
+anchor_right = 0.90000004
+anchor_bottom = -0.45000002
+offset_top = 1.0000019
+offset_bottom = 2.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]Resolution[/center]"
+
+[node name="Vsync" type="CheckBox" parent="." unique_id=1604718727]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71900004
+anchor_top = 0.56200004
+anchor_right = 0.75600004
+anchor_bottom = 0.637
+offset_left = -0.16003418
+offset_top = 0.1599884
+offset_right = 0.15997314
+offset_bottom = 0.1599884
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Vsync" unique_id=1531308228]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.167
+anchor_top = -1.167
+anchor_right = 2.167
+anchor_bottom = -0.54200006
+offset_left = 0.007993698
+offset_top = -0.9919987
+offset_right = -0.0079956055
+offset_bottom = 0.0080013275
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]V-Sync[/center]"
+
+[node name="WindowMode" type="OptionButton" parent="." unique_id=634293503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.112
+anchor_right = 0.80600005
+anchor_bottom = 0.887
+offset_left = 203.84
+offset_top = 200.16
+offset_right = -83.84003
+offset_bottom = -27.839996
+theme_override_fonts/font = ExtResource("2_rj8ut")
+selected = 0
+item_count = 3
+popup/item_0/text = "Borderless"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowMode" unique_id=993670463]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = -1.45
+anchor_right = 0.92300004
+anchor_bottom = -0.45000002
+offset_left = -2.4000015
+offset_top = 8.0
+offset_right = 0.008003235
+offset_bottom = 8.000001
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_rj8ut")
+bbcode_enabled = true
+text = "[center]WIndow mode[/center]"
+
+[node name="Save" type="Button" parent="." unique_id=1626051081]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81200004
+anchor_top = 0.8
+anchor_right = 0.81200004
+anchor_bottom = 0.8
+offset_left = -67.68005
+offset_top = -20.0
+offset_right = -27.680054
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("2_rj8ut")
+text = "Save"
