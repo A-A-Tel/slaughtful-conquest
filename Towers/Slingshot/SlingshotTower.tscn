@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dh1diaackduc2"]
+
+[ext_resource type="Texture2D" uid="uid://coxi73cj7bwcm" path="res://Towers/Slingshot/Assets/Texture.png" id="1_3xv5s"]
+[ext_resource type="Script" uid="uid://2a5fbpkx5gqf" path="res://Towers/Slingshot/SlingshotTower.cs" id="1_74qbx"]
+[ext_resource type="PackedScene" uid="uid://df1em0cg80pka" path="res://Towers/Slingshot/SlingshotProjectile.tscn" id="2_rr48j"]
+
+[node name="SlingshotTower" type="Node2D" unique_id=1307799052]
+script = ExtResource("1_74qbx")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1337400005]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=752489116]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=439766088]
+texture = ExtResource("1_3xv5s")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Cooldown" type="Timer" parent="." unique_id=921842036]
+wait_time = 9.923
+one_shot = true
+
+[node name="Projectile" parent="." unique_id=2104850288 instance=ExtResource("2_rr48j")]
+visible = false

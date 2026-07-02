@@ -1,15 +1,11 @@
-using Godot;
 using System;
 
-public partial class Trike : Node2D
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+namespace SlaughtfulConquest.Enemies.Trike;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+public partial class Trike : Enemy
+{
+	protected override float Speed => Health < MaxHealth - Health ? 0.08f : 0.05f;
+	protected override int MaxHealth => 100;
+	protected override int Health { get; set; }
+	protected override int Reward => 10;
 }

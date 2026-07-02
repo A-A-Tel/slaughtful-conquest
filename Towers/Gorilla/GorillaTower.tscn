@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://07svc47rx7tc"]
+
+[ext_resource type="Script" uid="uid://dfu3xjc1r5v03" path="res://Towers/Gorilla/GorillaTower.cs" id="1_sskkp"]
+[ext_resource type="Texture2D" uid="uid://cubfp8m5aarit" path="res://Towers/Gorilla/Assets/Texture.png" id="1_tb3f1"]
+[ext_resource type="PackedScene" uid="uid://cb6jbksg78vlv" path="res://Towers/Gorilla/GorillaProjectile.tscn" id="3_qtkn1"]
+
+[node name="GorillaTower" type="Node2D" unique_id=1809941423]
+script = ExtResource("1_sskkp")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=2116191985]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1158057070]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1992678197]
+texture = ExtResource("1_tb3f1")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Cooldown" type="Timer" parent="." unique_id=428043880]
+wait_time = 9.923
+one_shot = true
+
+[node name="Projectile" parent="." unique_id=656231825 instance=ExtResource("3_qtkn1")]
+visible = false

@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://b7sbvxx32g813"]
 
 [ext_resource type="Script" uid="uid://cnfeibgxccctd" path="res://Enemies/Trike/Trike.cs" id="1_bafma"]
+[ext_resource type="Texture2D" uid="uid://dwskt6v1i0p35" path="res://Enemies/Trike/Assets/Texture.png" id="2_qhpbp"]
 
-[node name="Trike" type="Node2D" unique_id=605990545]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myi6a"]
+size = Vector2(32, 20)
+
+[node name="Trike" type="PathFollow2D" unique_id=1754225588]
 script = ExtResource("1_bafma")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=881736613]
+texture = ExtResource("2_qhpbp")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=272455845]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1388477725]
+shape = SubResource("RectangleShape2D_myi6a")

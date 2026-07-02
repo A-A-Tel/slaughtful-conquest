@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cb6jbksg78vlv"]
+
+[ext_resource type="Script" uid="uid://dbmrhiqdsb8cg" path="res://Towers/Gorilla/GorillaProjectile.cs" id="1_ca7jb"]
+[ext_resource type="Texture2D" uid="uid://d1sqvlwwxpsja" path="res://Towers/Gorilla/Assets/ProjectileTexture.png" id="2_1tnf2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_myi6a"]
+radius = 15.95
+
+[node name="GorillaProjectile" type="Area2D" unique_id=656231825]
+script = ExtResource("1_ca7jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539290429]
+shape = SubResource("CircleShape2D_myi6a")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=2118866502]
+scale = Vector2(1.9999999, 1.9999999)
+texture = ExtResource("2_1tnf2")

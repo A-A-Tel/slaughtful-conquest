@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://d2j553jho6tom" path="res://Maps/Test/Assets/TestGround2.png" id="4_okxu4"]
 [ext_resource type="Texture2D" uid="uid://c4fnitq1qxakt" path="res://Maps/Test/Assets/Cave.png" id="5_i2sle"]
 [ext_resource type="Texture2D" uid="uid://dcl7l3aclyk4e" path="res://Maps/Test/Assets/Tree.png" id="6_okxu4"]
+[ext_resource type="Texture2D" uid="uid://b68hxv25vsdia" path="res://Maps/Assets/Heart.webp" id="10_ahrlg"]
+[ext_resource type="Texture2D" uid="uid://dglh05pn8ufyo" path="res://Maps/Assets/bone.webp" id="10_unflt"]
+[ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="10_wbchm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvd8e"]
 texture = ExtResource("2_4b0uu")
@@ -37,12 +40,17 @@ sources/0 = SubResource("TileSetAtlasSource_vvd8e")
 sources/1 = SubResource("TileSetAtlasSource_f67k7")
 sources/2 = SubResource("TileSetAtlasSource_mrjih")
 
+[sub_resource type="Curve2D" id="Curve2D_okxu4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 624, 8, 0, 0, 0, 0, 624, 112, 0, 0, 0, 0, 208, 112, 0, 0, 0, 0, 208, 48, 0, 0, 0, 0, 80, 48, 0, 0, 0, 0, 80, 208, 0, 0, 0, 0, 496, 208, 0, 0, 0, 0, 496, 304, 0, 0, 0, 0, 48, 304, 0, 0, 0, 0, 48, 272, 0, 0, 0, 0, 48, 264, 0, 0, 0, 0, 48, 256)
+}
+point_count = 12
+
 [node name="TestMap" type="Node2D" unique_id=1952824425]
 texture_filter = 1
 script = ExtResource("1_b51rp")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=21065455]
-offset_left = 1.0
 offset_right = 640.0
 offset_bottom = 320.0
 color = Color(0.0026433575, 0.18716589, 8.4228816e-08, 1)
@@ -58,6 +66,10 @@ metadata/_edit_lock_ = true
 position = Vector2(40, 240)
 scale = Vector2(2.25, 2.25)
 texture = ExtResource("5_i2sle")
+
+[node name="EnemyPath" type="Path2D" parent="." unique_id=689314917]
+curve = SubResource("Curve2D_okxu4")
+metadata/_edit_lock_ = true
 
 [node name="Tree" type="Sprite2D" parent="." unique_id=784922197]
 position = Vector2(264.00003, 40)
@@ -118,3 +130,49 @@ texture = ExtResource("6_okxu4")
 position = Vector2(32.00006, 48.000008)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("6_okxu4")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=389486758]
+wait_time = 0.15
+
+[node name="HealthLabel" type="RichTextLabel" parent="." unique_id=1169217820]
+offset_left = 104.0
+offset_top = 8.0
+offset_right = 209.0
+offset_bottom = 25.0
+theme_override_fonts/normal_font = ExtResource("10_wbchm")
+text = "HEALTH"
+
+[node name="Heart" type="Sprite2D" parent="." unique_id=213072436]
+position = Vector2(84, 16.000002)
+scale = Vector2(0.043055546, 0.043055546)
+texture = ExtResource("10_ahrlg")
+
+[node name="Bone" type="Sprite2D" parent="." unique_id=2055853112]
+position = Vector2(308, 16)
+scale = Vector2(0.06249994, 0.062499933)
+texture = ExtResource("10_unflt")
+
+[node name="BoneLabel" type="RichTextLabel" parent="." unique_id=1176156447]
+offset_left = 328.0
+offset_top = 8.0
+offset_right = 433.0
+offset_bottom = 25.0
+theme_override_fonts/normal_font = ExtResource("10_wbchm")
+text = "HEALTH"
+
+[node name="BoneLabel2" type="RichTextLabel" parent="." unique_id=67287426]
+offset_left = 524.0
+offset_top = 216.0
+offset_right = 629.0
+offset_bottom = 304.0
+theme_override_fonts/normal_font = ExtResource("10_wbchm")
+text = "S - SLING (20)
+G - APE (50)"
+
+[node name="WaveLabel" type="RichTextLabel" parent="." unique_id=1334692004]
+offset_left = 420.0
+offset_top = 8.0
+offset_right = 525.0
+offset_bottom = 25.0
+theme_override_fonts/normal_font = ExtResource("10_wbchm")
+text = "WAVE X"

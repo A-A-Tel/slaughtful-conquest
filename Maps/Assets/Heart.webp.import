@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwskt6v1i0p35"
-path="res://.godot/imported/Trike.png-8fbb2508bf6687dfccf196727b29af7e.ctex"
+uid="uid://b68hxv25vsdia"
+path="res://.godot/imported/Heart.webp-5751e741863c62fa3f031277592a3fe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Trike/Assets/Trike.png"
-dest_files=["res://.godot/imported/Trike.png-8fbb2508bf6687dfccf196727b29af7e.ctex"]
+source_file="res://Maps/Assets/Heart.webp"
+dest_files=["res://.godot/imported/Heart.webp-5751e741863c62fa3f031277592a3fe2.ctex"]
 
 [params]
 

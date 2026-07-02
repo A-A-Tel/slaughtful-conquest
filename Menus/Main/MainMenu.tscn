@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bc1lgl0umphhl" path="res://Fonts/Castaway.otf" id="1_0bhet"]
 [ext_resource type="Script" uid="uid://dqbiqt7v1rhpx" path="res://Menus/Main/MainMenu.cs" id="1_jyye3"]
 [ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_cpfrm"]
+[ext_resource type="AudioStream" uid="uid://qg84dp7m6bju" path="res://Menus/Main/Assets/music.mp3" id="4_ivry2"]
 
 [node name="MainMenu" type="Control" unique_id=1094183842]
 layout_mode = 3
@@ -76,3 +77,8 @@ offset_right = 0.32000732
 theme_override_fonts/font = ExtResource("2_cpfrm")
 theme_override_font_sizes/font_size = 16
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=775819366]
+stream = ExtResource("4_ivry2")
+autoplay = true
+bus = &"Music"

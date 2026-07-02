@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://df1em0cg80pka"]
+
+[ext_resource type="Script" uid="uid://do7ei7jlxd5mr" path="res://Towers/Slingshot/SlingshotProjectile.cs" id="1_bhseb"]
+[ext_resource type="Texture2D" uid="uid://c33ju3ygue7hl" path="res://Towers/Slingshot/Assets/ProjectileTexture.png" id="2_3e8jm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5sq5"]
+radius = 5.65
+
+[node name="SlingshotProjectile" type="Area2D" unique_id=2104850288]
+script = ExtResource("1_bhseb")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=196156657]
+texture = ExtResource("2_3e8jm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1277464437]
+shape = SubResource("CircleShape2D_d5sq5")

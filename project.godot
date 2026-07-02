@@ -24,7 +24,7 @@ buses/default_bus_layout="uid://dgnaw7j8w78cn"
 window/size/viewport_width=640
 window/size/viewport_height=320
 window/size/mode=2
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
 [dotnet]
@@ -45,4 +45,5 @@ pause={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
