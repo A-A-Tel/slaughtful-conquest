@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cjmkppnq4yveq" path="res://Fonts/KiwiSoda.ttf" id="2_rj8ut"]
 
 [node name="SettingsMenu" type="Control" unique_id=617976794]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

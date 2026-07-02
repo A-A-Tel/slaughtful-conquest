@@ -6,7 +6,7 @@ namespace SlaughtfulConquest.Menus.Settings;
 
 public partial class SettingsMenu : Control
 {
-	private List<Vector2I> _resolutions = [];
+	private readonly List<Vector2I> _resolutions = [];
 	
 	private Slider _masterSlider;
 	private Slider _musicSlider;
